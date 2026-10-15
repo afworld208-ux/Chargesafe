@@ -1,0 +1,8 @@
+{
+  "appId": "com.afworld.chargesafe",
+  "appName": "ChargeSafe",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  }
+}
