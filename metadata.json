@@ -1,0 +1,6 @@
+{
+  "name": "ChargeSafe - Phone Charging Station Management",
+  "description": "Secure 800-slot phone charging station deposit, return verification, token tracking, and live monitoring system.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

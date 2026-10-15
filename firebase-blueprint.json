@@ -1,0 +1,53 @@
+{
+  "entities": {
+    "Deposit": {
+      "title": "Deposit",
+      "description": "A phone charging deposit record with slot, token, mobile, and status.",
+      "type": "object",
+      "properties": {
+        "token": { "type": "number", "description": "Token number (1 to 10000)" },
+        "tokenStr": { "type": "string", "description": "Padded 5-digit token string" },
+        "mobile": { "type": "string", "description": "10-digit mobile number" },
+        "box": { "type": "string", "description": "Charging box e.g. B001 to B100" },
+        "socket": { "type": "string", "description": "Charging socket e.g. S01 to S08" },
+        "slotKey": { "type": "string", "description": "Composite key B001-S01" },
+        "status": { "type": "string", "enum": ["CHARGING", "COLLECTED"], "description": "Current status" },
+        "time": { "type": "string", "format": "date-time", "description": "Deposit ISO time" },
+        "formattedTime": { "type": "string", "description": "Display formatted time" },
+        "collectedAt": { "type": "string", "description": "Collection timestamp" },
+        "collectedBy": { "type": "string", "description": "Staff ID who handled return" },
+        "photo": { "type": "string", "description": "Verification photo data or URL" },
+        "phoneModel": { "type": "string", "description": "Device brand and model" },
+        "cableType": { "type": "string", "description": "Charging cable type" },
+        "notes": { "type": "string", "description": "Deposit notes or details" },
+        "fee": { "type": "number", "description": "Optional deposit fee" }
+      },
+      "required": ["token", "tokenStr", "mobile", "box", "socket", "slotKey", "status", "time"]
+    },
+    "AuditLog": {
+      "title": "AuditLog",
+      "description": "System audit trail for operations, deposits, and returns.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique log ID" },
+        "timestamp": { "type": "string", "format": "date-time", "description": "Timestamp of action" },
+        "action": { "type": "string", "description": "Action type" },
+        "performedBy": { "type": "string", "description": "Operator ID" },
+        "details": { "type": "string", "description": "Detailed log message" },
+        "token": { "type": "number", "description": "Associated token" },
+        "slotKey": { "type": "string", "description": "Associated slot key" }
+      },
+      "required": ["id", "timestamp", "action", "performedBy", "details"]
+    }
+  },
+  "firestore": {
+    "/deposits/{depositId}": {
+      "schema": "Deposit",
+      "description": "Collection of all charging deposits"
+    },
+    "/audit_logs/{logId}": {
+      "schema": "AuditLog",
+      "description": "Collection of system audit logs"
+    }
+  }
+}
