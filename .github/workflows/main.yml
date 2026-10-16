@@ -40,9 +40,6 @@ jobs:
       - name: Install Capacitor
         run: npm install @capacitor/core @capacitor/cli @capacitor/android
 
-      - name: Add Android platform
-        run: npx cap add android
-
       - name: Sync Android
         run: npx cap sync android
 
