@@ -31,10 +31,13 @@ jobs:
           distribution: temurin
           java-version: 21
 
+          
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
         with:
           accept-android-sdk-licenses: true
+          packages: platform-tools platforms;android-33 build-tools;33.0.2
+          
 
       - name: Install Capacitor
         run: npm install @capacitor/core @capacitor/cli @capacitor/android
