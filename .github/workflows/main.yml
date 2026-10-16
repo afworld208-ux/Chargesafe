@@ -35,6 +35,7 @@ jobs:
         uses: android-actions/setup-android@v3
         with:
           accept-android-sdk-licenses: true
+          cmdline-tools-version: "11.0"
       - name: Install Capacitor
         run: npm install @capacitor/core @capacitor/cli @capacitor/android
 
