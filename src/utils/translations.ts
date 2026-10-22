@@ -1,1 +1,42 @@
+export type Lang = 'en' | 'ml';
 
+export const TRANSLATIONS = {
+  en: {
+    title: "ChargeSafe",
+    subtitle: "Secure Phone Charging Management System",
+    customerPortal: "Customer Portal",
+    staffPortal: "Staff Portal",
+    checkStatus: "Check Status",
+    enterToken: "Enter Token Number or Mobile",
+    search: "Search",
+    slotStatus: "Slot Status",
+    charging: "Charging",
+    available: "Available",
+    collected: "Collected",
+    depositNew: "New Deposit",
+    processReturn: "Process Return",
+    adminDashboard: "Admin Dashboard",
+    settings: "Settings",
+    logout: "Logout",
+    login: "Staff Login",
+  },
+  ml: {
+    title: "ചാർജ്സേഫ്",
+    subtitle: "സുരക്ഷിത ഫോൺ ചാർജിങ് മാനേജ്മെന്റ് സിസ്റ്റം",
+    customerPortal: "കസ്റ്റമർ പോർട്ടൽ",
+    staffPortal: "സ്റ്റാഫ് പോർട്ടൽ",
+    checkStatus: "സ്റ്റാറ്റസ് പരിശോധിക്കുക",
+    enterToken: "ടോക്കൻ നമ്പറോ മൊബൈലോ നൽകുക",
+    search: "തിരയുക",
+    slotStatus: "സ്ലോട്ട് സ്റ്റാറ്റസ്",
+    charging: "ചാർജ് ചെയ്യുന്നു",
+    available: "ലഭ്യമാണ്",
+    collected: "കൈപ്പറ്റി",
+    depositNew: "പുതിയ ഡെപ്പോസിറ്റ്",
+    processReturn: "ഫോൺ തിരികെ നൽകുക",
+    adminDashboard: "അഡ്മിൻ ഡാഷ്‌ബോർഡ്",
+    settings: "ക്രമീകരണങ്ങൾ",
+    logout: "പുറത്തുകടക്കുക",
+    login: "സ്റ്റാഫ് ലോഗിൻ",
+  }
+};
