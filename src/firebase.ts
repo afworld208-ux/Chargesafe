@@ -1,21 +1,23 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
+// നിങ്ങളുടെ യഥാർത്ഥ ഫയർബേസ് കോൺഫിഗറേഷൻ
 const firebaseConfig = {
-  apiKey: "AIzaSyD9Pj8m4XswZodCU2E6sYh300K...", // ⚠️ നിങ്ങളുടെ ബോക്സിൽ നിന്നുള്ള മുഴുവൻ apiKey കോപ്പി ചെയ്ത് നൽകുക
+  apiKey: "AIzaSyD9Pj8m4XswZodCU2E6sYh30OK6C_r639A",
   authDomain: "charging-point-e4b72.firebaseapp.com",
   projectId: "charging-point-e4b72",
   storageBucket: "charging-point-e4b72.firebasestorage.app",
   messagingSenderId: "545220585842",
-  appId: "1:545220585842:web:dac90640ef238...", // ⚠️ നിങ്ങളുടെ ബോക്സിൽ നിന്നുള്ള മുഴുവൻ appId കോപ്പി ചെയ്ത് നൽകുക
+  appId: "1:545220585842:web:dac90640ef238a30bc55eb",
   measurementId: "G-JWL39FJKC0"
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
 
-// നിങ്ങളുടെ യഥാർത്ഥ Gmail ID ഇവിടെ നൽകുക
+// നിങ്ങളുടെ അഡ്മിൻ Gmail ID ഇവിടെ നൽകുക (താഴെയുള്ള ഇമെയിലിന് പകരം നിങ്ങളുടെ ഇമെയിൽ നൽകാം)
 export const SUPER_ADMIN_EMAIL = "your-admin-email@gmail.com";
 
 export const isSuperAdminEmail = (email: string | null) => {
