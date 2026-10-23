@@ -1,4 +1,4 @@
-import { initializeApp } from "firebase/app";
+tuimport { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
 // നിങ്ങളുടെ യഥാർത്ഥ ഫയർബേസ് കോൺഫിഗറേഷൻ
@@ -18,7 +18,7 @@ export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
 
 // നിങ്ങളുടെ അഡ്മിൻ Gmail ID ഇവിടെ നൽകുക (താഴെയുള്ള ഇമെയിലിന് പകരം നിങ്ങളുടെ ഇമെയിൽ നൽകാം)
-export const SUPER_ADMIN_EMAIL = "your-admin-email@gmail.com";
+export const SUPER_ADMIN_EMAIL = "afworld208@gmail.com";
 
 export const isSuperAdminEmail = (email: string | null) => {
   if (!email) return false;
