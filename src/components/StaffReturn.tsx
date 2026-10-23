@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Lang, TRANSLATIONS } from '../utils/translations';
 import { DepositRecord } from '../types';
 import { syncManager } from '../utils/storage';
-import { playCollectSound } from '../utils/sound';
+import { playCollectSound } from "../sound";
 import confetti from 'canvas-confetti';
 import {
   Search,
