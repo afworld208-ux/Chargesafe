@@ -1,4 +1,4 @@
-tuimport { initializeApp } from "firebase/app";
+import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
 // നിങ്ങളുടെ യഥാർത്ഥ ഫയർബേസ് കോൺഫിഗറേഷൻ
