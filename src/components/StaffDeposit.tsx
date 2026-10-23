@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Lang, TRANSLATIONS } from '../utils/translations';
 import { DepositRecord, Slot, CableType } from '../types';
 import { syncManager, ALL_800_SLOTS } from '../utils/storage';
-import { playDepositSound } from '../utils/sound';
+import { playDepositSound } from "../sound";
 import confetti from 'canvas-confetti';
 import {
   Camera,
