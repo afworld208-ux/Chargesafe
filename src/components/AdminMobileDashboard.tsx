@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Lang, TRANSLATIONS } from '../utils/translations';
 import { DepositRecord, AuditLogItem } from '../types';
 import { syncManager } from '../utils/storage';
-import { generateQRCodeSVG } from '../utils/qr';
+import { generateQRCodeSVG } from "../qr";
 import {
   Shield,
   Smartphone,
