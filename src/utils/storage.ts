@@ -3,6 +3,12 @@ import { DepositRecord, AuditLogItem } from "../types";
 const STORAGE_KEY_DEPOSITS = "chargesafe_deposits_v1";
 const STORAGE_KEY_LOGS = "chargesafe_logs_v1";
 
+// ALL_800_SLOTS array export
+export const ALL_800_SLOTS = Array.from({ length: 800 }, (_, i) => {
+  const num = i + 1;
+  return `SLOT-${num.toString().padStart(3, '0')}`;
+});
+
 export const syncManager = {
   subscribe(callback: (data: { deposits: DepositRecord[]; logs: AuditLogItem[] }) => void) {
     const loadData = () => {
@@ -90,4 +96,3 @@ export const syncManager = {
     }
   }
 };
-
