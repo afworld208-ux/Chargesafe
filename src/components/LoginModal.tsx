@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Lang, TRANSLATIONS } from '../utils/translations';
 import { UserRole } from '../types';
-import { auth, googleProvider, SUPER_ADMIN_EMAIL, isSuperAdminEmail } from '../firebase';
+import { auth, googleProvider, SUPER_ADMIN_EMAIL, isSuperAdminEmail } from "../firebase";
 import { signInWithPopup } from 'firebase/auth';
 import { Shield, UserCheck, Smartphone, X, KeyRound, CheckCircle2, AlertCircle, Crown, Mail } from 'lucide-react';
 
