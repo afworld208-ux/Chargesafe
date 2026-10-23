@@ -1,7 +1,7 @@
 import React from 'react';
 import { Lang, TRANSLATIONS } from '../utils/translations';
 import { DepositRecord } from '../types';
-import { generateQRCodeSVG, generateBarcodeSVG } from '../utils/qr';
+import { generateQRCodeSVG, generateBarcodeSVG } from "../qr";
 import { Printer, X, Download, ShieldCheck, Zap } from 'lucide-react';
 
 interface PrintReceiptModalProps {
